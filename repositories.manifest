@@ -8,4 +8,10 @@ summary: userapp project repository
 
 #:
 #role: prerequisite
-#location: https://git.build2.org/hello/libhello.git
+#location: https://git.build2.org/hello/libhello.git#master
+
+:
+role: prerequisite
+location: https://github.com/Klaim/build2-repro-app-exporting-exe.git#master
+
+

@@ -4,7 +4,7 @@ import app = app%exe{app}
 
 exe{userapp}: {hxx ixx txx cxx}{**} $libs testscript $app
 {
-    app = "$directory($app)/$name($app)"
+    app = "$directory($app)/$name($app)" # WORKAROUND bug in 0.13.0 that prevents from using `$path($app)`
 }
 
 cxx.poptions =+ "-I$out_root" "-I$src_root"

@@ -1,6 +1,10 @@
 libs =
 #import libs += libhello%lib{hello}
+import app = app%exe{app}
 
-exe{userapp}: {hxx ixx txx cxx}{**} $libs testscript
+exe{userapp}: {hxx ixx txx cxx}{**} $libs testscript $app
+{
+    app = "$directory($app)/$name($app)"
+}
 
 cxx.poptions =+ "-I$out_root" "-I$src_root"
